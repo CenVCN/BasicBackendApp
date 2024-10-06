@@ -1,8 +1,6 @@
-# BasicBackendApp
+# BasicBackendApp - Simple User Management API
 
 A Basic Backend Applicaiton implemented using Node.js and Express.js
-
-# Simple User Management API
 
 ## Overview
 
