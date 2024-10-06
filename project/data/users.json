@@ -1,0 +1,50 @@
+[
+   {
+      "id": 1,
+      "username": "updateduser",
+      "email": "updated@example.com",
+      "password": "password123"
+   },
+   {
+      "id": 2,
+      "username": "testuser",
+      "email": "testuser@example.com",
+      "password": "password123"
+   },
+   {
+      "id": 3,
+      "username": "JohnDoe",
+      "email": "JohnDoe@example.com",
+      "password": "JohnDoe123"
+   },
+   {
+      "id": 4,
+      "username": "Zild",
+      "email": "ZildBen@example.com",
+      "password": "Superpower123"
+   },
+   {
+      "id": 5,
+      "username": "Dilaw",
+      "email": "DilawO@example.com",
+      "password": "Uhaw123"
+   },
+   {
+      "id": 6,
+      "username": "RamonGarcia",
+      "email": "RamonG@example.com",
+      "password": "RamG123"
+   },
+   {
+      "id": 7,
+      "username": "Musashi",
+      "email": "MusashiM@example.com",
+      "password": "Musashi123"
+   },
+   {
+      "id": 8,
+      "username": "Garp",
+      "email": "Viceadmiral@example.com",
+      "password": "Garp123"
+   }
+]
