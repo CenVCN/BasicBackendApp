@@ -46,5 +46,11 @@
       "username": "Garp",
       "email": "Viceadmiral@example.com",
       "password": "Garp123"
+   },
+   {
+      "id": 9,
+      "username": "JWTTest",
+      "email": "JWTTest@example.com",
+      "password": "JWTTestPassword"
    }
 ]
