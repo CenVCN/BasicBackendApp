@@ -1,4 +1,6 @@
 const userModel = require("../models/userModel");
+const jwt = require("jsonwebtoken");
+const secretKey = "your_secret_key"; // Use a strong secret key
 
 const register = (req, res) => {
   const { username, email, password } = req.body;
@@ -17,19 +19,23 @@ const register = (req, res) => {
 const login = (req, res) => {
   const { username, password } = req.body;
 
-  if (!userModel.validateFields([username, password])) {
+  if (!validateFields([username, password])) {
     return res.status(400).send("All Fields are Required!");
   }
 
-  const users = userModel.loadUsers(); // Loads existing users from the mock-database
+  const users = loadUsers(); // Loads existing users from the mock-database
   const user = users.find(
     (u) => u.username === username && u.password === password
   );
 
   if (!user) return res.status(400).send("Invalid Credentials.");
 
-  const token = `token-${user.id}`; // Generates a token to be used for authentication
-  res.send({ token }); // Returns the token back
+  // Generate a JWT token for the user
+  const token = jwt.sign({ id: user.id, username: user.username }, secretKey, {
+    expiresIn: "1h", // Token expires in 1 hour
+  });
+
+  res.send({ token }); // Return the generated token
 };
 
 const getProfile = (req, res) => {
