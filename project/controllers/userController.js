@@ -19,11 +19,11 @@ const register = (req, res) => {
 const login = (req, res) => {
   const { username, password } = req.body;
 
-  if (!validateFields([username, password])) {
+  if (!userModel.validateFields([username, password])) {
     return res.status(400).send("All Fields are Required!");
   }
 
-  const users = loadUsers(); // Loads existing users from the mock-database
+  const users = userModel.loadUsers(); // Loads existing users from the mock-database
   const user = users.find(
     (u) => u.username === username && u.password === password
   );
